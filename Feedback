@@ -1,0 +1,157 @@
+General Comments
+It’s clear that you put a lot of thought and care into creating this project, and I’m so glad I had the opportunity to read through it. You took a tremendous amount of care in creating efficient processes to handle the various stages of the project and you have a great project to share with others after the conclusion of the course. I hope you continue with the project in the future. 
+Below, I’ve organized my feedback based on the four overall categories (Github structure, code/Jupyter Noteboook, code output, and report) and then by each week’s deliverable. 
+
+Overall Github Structure
+Feedback
+•	All project outputs (the reports, models, notebooks, and code output) and the data are neatly organized in the Github repository under their appropriate folders, and I was able to find all the data, notebooks, reports, etc. 
+•	This is a minor point, but perhaps including something like “notebook output” in the name for all the code output files might help any readers outside of this class distinguish the official reports from the notebook outputs under the Reports folder (I saw that you did this for Week 2). I was able to distinguish the final reports from the code outputs since you included “Written Report” in the names for the final reports each week, but this may just be something to be mindful of if you share the project with others beyond the class.
+•	The naming conventions for the data were well done, as it is helpful to see specifically which files were used for your raw and processed training, validation, and testing data.
+
+Code/Jupyter Notebook
+Before I discuss my specific feedback on each of the weekly notebooks, I want to disclose that I did not run the notebooks on my end and my commentary is based on reading through the code saved to Github. I also want to apologize in advance for some similarity in my comments between Weeks 6 through 8 (the modeling phases). 
+Week 2 Feedback
+•	The custom function used to generate and print the descriptive stats is well-constructed and includes helpful commentary for each stage of the function.
+•	Similar to the above, the custom function used to load the images is well-constructed and includes helpful commentary for each stage of the function.
+•	The debug line designed to flag images that cannot be decoded was a thoughtful inclusion in the function. Well done!
+Week 3 Feedback
+•	The visualization of the target feature is well done and enhances the report readability. 
+•	The code is well-commented, especially on the custom functions you created to help the reader understand what each step of the function is doing.
+•	The custom pipeline to handle processing the data is very well done and makes the code very clean and easy for the reader to follow. 
+Week 4 Feedback
+•	You did a great job handling the imbalanced classes in the dataset, and the code overall has an efficient means of handling each stage of pre-processing with pipelines.  
+•	All the functions are well-commented to make it clear what the function is performing on each step of the process. This enhances the readability of the code overall.
+•	I wonder if there’s a way to include a line of code in Line 11 with or after the break to signal something like “Further output halted by user” so that the Keyboard Interrupt message is not raised (the message was just something I noticed in the document preview of the Week 4 code saved to Github). 
+Week 5 Feedback
+•	The code does a great job of efficiently applying the transformations to the training, validation, and test sets. 
+•	The commentary in each function is again very helpful in seeing specifically what the function is doing when applying transformations. 
+•	Great job including error handling in your code. This is something that I’ve noticed throughout each week of your project so far, but I wanted to mention that you’ve done a great job including this and it is something I want to be more mindful of in my own work. 
+Week 6 Feedback
+•	The code to build the models is well-structured and I appreciated the inline comments for each layer of the model to briefly explain the purpose of each layer of the model. You also have great error handling in your functions. This was an efficient way to apply the training and evaluation process to all three iterations of the model.
+•	The inclusion of early stopping in your train_and_validate function was a smart way to reduce the chance of overfitting. 
+•	Overall, this is a very clean way of implementing the model training and validation process for multiple iterations of a model. 
+Week 7 Feedback
+•	Similar to Week 6, your code to build the models is well-structured and includes helpful inline comments for each layer of the model to briefly explain the purpose of each layer of the model. The error handling is well thought out in your functions, and you efficiently applied the training and evaluation process to all three iterations of the model.
+•	There seems to be an Undefined Metric Warning for the precision metric in one of the models based on the output of the code (I only see it after the classification report for Model 3). This may be something to look into.  
+•	It looks like there is also a User Warning based on the output of the code related to a deprecated parameter (the first instance you see it is after Line 8). Switching the ‘pretrained’ parameter to ‘weights’ may be helpful for future uses of your model.
+Week 8 Feedback
+•	Similar to Weeks 6 and 7, excellent application of custom functions to build, train, and evaluate the three models. I have definitely learned a lot in reading through your modeling approaches. 
+•	The commentary for each layer of the model is also very helpful in understanding the purpose of each layer, which is definitely helpful in a complex model like EfficientNet. 
+•	The Undefined Metric Warning seems to have cleared from Week 7, but it looks like the User Warning related to a deprecated parameter is in Week 8 as well (the first instance you see it is after Line 8). Switching the ‘pretrained’ parameter to ‘weights’ may be helpful for future uses of your model.
+Week 9 Feedback
+•	Excellent commentary and error handling throughout each block of code in this section.
+•	The code is well-organized into sections of training and evaluating the nine models, and displaying the winning model.
+•	It seems like there is a Future Warning after Line 10 that may need to be looked into for future uses of the model. It is triggered by using `torch.load` with `weights_only=False` and they seem to recommend you set `weights_only=True` for any use case where you don't have full control of the loaded file. I’m not sure whether that is the case here but wanted to mention it to be safe. The full message can be seen after Line 10 to get a better idea of the warning.
+Week 10 Feedback
+•	The functions you created to implement each of the changes to the image data via feature extraction and PCA are well-structured, appropriately named for easier interpretation, and include helpful commentary.
+•	The inclusion of a comparison of images before and after data centric AI are also incredibly helpful to see how the images changed, which can then be used to complement your analysis of the model’s performance both before and after the data changes with data centric AI. Very well done. Also the inclusion of the Structural Similarity Index is very helpful to quantify the similarity of the training images both before and after the data changes. This was a very thoughtful inclusion to your report!
+•	It seems like there is Future Warning after Line 50 (it seems to be the same one from Week 9) that may need to be looked into for future uses of the model. 
+Week 11 Feedback
+•	After reading your report, I was really excited to see how you implemented the code to analyze some of the class 1 predictions for the correctly classified and misclassified images. The code is very well-constructed and includes helpful comments in each stage of the process with appropriate error handling.  
+•	Your decision to remove certain features after conducting feature importance analysis is sound and the code you implemented to do so is efficient with exceptional error handling. In conjunction with your written report, this seems to have had a positive impact on the model by improving class 1 predictions.
+•	The code to visualize the image importance score and feature importance score is well-constructed and easy for the reader to follow. The only suggestion I would make is maybe including a visualization that compares the metadata feature importance scores, but the output that you’ve included is already clean. 
+Week 12 Feedback
+•	The code efficiently shows how you packaged and saved the model for deployment.
+•	You did a great job including code that neatly displays all information needed about the environment.
+
+Code Output
+Week 2 Feedback
+•	It was helpful to see a mixture of both descriptive statistics and image data for your project.
+•	The tables used to visualize the descriptive stats are clean. 
+•	The subheadings used to distinguish which stage of the data ingestion process you were performing (load metadata, visualize descriptive stats, and load image data) were helpful in guiding the reader.
+Week 3 Feedback
+•	The inclusion of images based on target value is helpful to see. Something that might enhance the output might be including a brief description of what readers might see in an image with target value 0 vs. 1.
+•	The correlation plot was helpful in visualizing the correlations between each of the variables in the dataset. Similar to the point above, something that might enhance this section might be commenting on the correlations of a few key variables (the possible interpretation of those correlations, whether that correlation is expected, etc.). I saw that you included this in the final report, but it may also help to mention it briefly in the output notebook. 
+•	I may have already commented on this under the Week 3 Notebook section in my feedback, but I just want to reiterate how clean and well-commented your code is. Well done!
+Week 4 Feedback
+•	I found your inclusion of the distribution before and after handling class imbalance to be helpful in comparing what the representation of each class was before and after pre-processing. Perhaps also including a graph to depict the distribution before and after handling class imbalance might be impactful in visually seeing the difference in distribution, but this is just a personal preference. 
+•	The functions to create the dataframes after processing your data are very clean and well-constructed. It may also be helpful to include a preview of each dataframe just to confirm they were successfully created, but that is also just a personal preference. 
+•	For Line 11, maybe the code can be adjusted to print a preview of the first 3 image and label batch shapes to enhance the readability of that section, but including this check was very smart. 
+Week 5 Feedback
+•	The code here is very clean/efficiently organized, but it may help the reader to also include a brief description of the feature engineering steps taken. I saw that you did this in the final written report and there are inline comments about rotating the images, but perhaps including a brief description right before the “Train DataLoader” section may give the reader an idea of what transformations were applied to the images before they see them. 
+•	Including the transformed images for the training and validation datasets was a helpful visual to illustrate what the transformations to the data were. 
+•	In addition to the actual transformed images, I thought your inclusion of the image shape, number of images, and data types for the training and validation sets was a thoughtful inclusion in your code output. 
+Week 6 Feedback
+•	The visualizations for training and validation loss and accuracy after each iteration of the model are very helpful in enhancing the readability of the code output.
+•	It is possible that I just missed this in the code output, but you mention pAUC-above TPR as one of the primary metrics to evaluate the models in your Week 6 final report, but including a visual comparison of this metric across all three models somewhere in the report may provide a helpful visual for the reader. Again, it’s possible that I just missed this in the output though.  
+•	This is a personal preference, but it may be helpful for the reader to see a brief summary of the models’ performances and how they changed over the iterations of the models within the code output. Very well done and thorough approach to this week’s modeling though! 
+Week 7 Feedback
+•	Similar to Week 6, the visualizations for training and validation loss and accuracy after each iteration of the model are very helpful in enhancing the readability of the code output.
+•	It may be helpful for the reader to see a brief summary at the top of the code output to share what the next phase of models are and how you might expect it to improve upon the first modeling phase (even though there is a thorough discussion of this in your final report for the week). 
+Week 8 Feedback
+•	Similar to the prior model building phases, excellent visualizations for training and validation loss/accuracy.
+•	It may be helpful to include a brief summary of the EfficientNet model at the top of the code output to provide the reader with additional context about this week’s selected models and how they may differ from the earlier two modeling phases.
+•	Though a summary of each model’s architecture is included after each model’s classification report, it may be helpful to also include a brief written summary right before that of what it means for non-technical audiences. 
+Week 9 Feedback
+•	Comparing all nine models, especially when they are more complicated like EfficientNet and Res-Net, is definitely a challenge and I applaud you for creating code that allowed you to build and evaluate each model so efficiently!
+•	Something that may enhance the code output is perhaps including a comparison of your top three models from each phase in one visual (for example, putting the plots of key metrics for Phase 1 – Model 2, Phase 2 – Model 1, and Phase 3 – Model 3 on one figure with subplots for each chart). This might help the reader quickly compare how the top-performing models from each modeling phase compared to one another. 
+•	In the same vein, it might also be helpful to include a brief summary at the beginning of the code output about which of the nine models performed the best and why. This may help guide the reader as they look through the specific metrics used to evaluate each model’s performance. 
+Week 10 Feedback
+•	The inclusion of short summaries before model training and model performance were helpful in providing context to what the changes were and how they ultimately impacted the model. Very well done.
+•	This is just personal preference, but I wonder if there is a way to only display a portion of the keys  when displaying the samples of training and validation images in this code (I’m referring to the portion where it shows Keys: ['ISIC_0082829', 'ISIC_0084964', 'ISIC_0096034', 'ISIC_0101462', 'ISIC_0104229', 'ISIC_0104724', 'ISIC_0119495', 'ISIC_0128586', 'ISIC_0131205', etc.] before displaying the sample images). The only reason I suggest printing a portion of the keys is to improve the readability of the output while also being able to confirm the information you need from the output; however, if the entire output is needed, then I wouldn’t change it.  
+•	Your inclusion of the images and their associated predicted probabilities after the model (Line 50) were really interesting to see! 
+Week 11 Feedback
+•	The inclusion of the sample images for correctly classified class 1 and misclassified class 1 images are really helpful to see along with the prediction probabilities. This is a great way to visually showcase the results of the model!
+•	Your inclusion of discussions surrounding bias and your rationale for retraining the model provided helpful context within the code output.  
+•	The inclusion of the final model’s key metrics on the test set at the end of the report are also very close to the training/validation metrics from earlier in the code output in terms of Class 0 and Class 1 precision, recall, and F-1 scores, indicating that the model did not overfit the data. Very well done!
+Week 12 Feedback
+•	The code output does a great job of showing the versions of Python and libraries needed to deploy the model. 
+
+Reports
+Week 1 Feedback
+•	The report is incredibly well-constructed and thoughtfully articulates the value from multiple angles (accessibility, mental health, and economic value) of the app to underserved populations or non-clinical settings.
+•	Including the initial architecture of the model was a great idea to give the reader an idea of how the model works at a general level before diving further into the details of the project. Very well done!
+•	The visuals of the images for both strong-labeled tiles and weak-labeled tiles was also very helpful to see given the nature of the project. You can really tell that you put a lot of thought and care in designing the proposal. 
+Week 2 Feedback
+•	Reiterating your goal at the top of the report was a great reminder to readers what the primary task is in the project and supports why you selected the target variable. 
+•	You did a great job explaining multiple aspects of the predictor variables (the rationale for selecting them, the structure of the data, etc.). It was also helpful to see why certain variables were not selected due to the unavailability, which is helpful to remind readers so that they can keep this in mind when making inferences from the model later. 
+•	One thing that might strengthen the report is including citations for the statistics that you reference under Predictors, Section B: Metadata when you explain the rationale for selecting the age and sex variables. 
+Week 3 Feedback
+•	You did a great job addressing early on what the imbalanced classes may lead to in the model, and in turn, what users should be aware of when making inferences from the model later on.
+•	You included several helpful visuals in your EDA report, and I appreciated the insights that you included after each visualization to help the reader understand what the results of your EDA mean in the context of your project. 
+•	Your rationale for your partition strategy at the top of the report is thoughtfully explained and logical especially in a case like this where one would expect benign cases to be the majority class. 
+Week 4 Feedback
+•	The written report does a great job of walking through all the steps taken in pre-processing and your rationale for doing each step.
+•	Your approach to pre-processing in general was very thorough and demonstrates your understanding of how to effectively pre-process both image and tabular data for neural networks.
+•	I included a similar comment  under the Week 4 Notebook Output section above, but it may enhance the readability of the final report to include a graph or other visual to show the comparison of the class distribution both before and after handling the class imbalance. That being said, you did a great job handling the imbalanced classes, especially for a dataset where one class had such a high initial presence in the data when compared to the other. Very well done! 
+Week 5 Feedback
+•	Your rationale for the transformations made to the image data are sound, descriptive, and well-articulated. 
+•	This is a personal preference, but it may be beneficial for the reader to see a sample of what the training and validation images looked like before the transformations were applied compared to what they looked like after transformations within the report. I saw that the transformed images are included as a visual in the output of the Week 5 code, but this may also be something to include in this final written report as well. 
+•	This is also a personal preference, and it can be inferred from reading the report, but perhaps including something to note that feature engineering was not applied to the tabular data may also be helpful to the reader. 
+Week 6 Feedback
+•	This is an incredibly thorough, organized, and well-written report! You did a great job explaining 
+    o	Why you chose a CNN and what introduces complexity within a CNN,
+    o	The purpose of each layer of the model,
+    o	The hyperparameters, and
+    o	The model metrics
+•	Your comparison of each of the various hyperparameters is very thorough and I appreciated that you included not only a description of what each hyperparameter controls, but also your rationale for selecting particular hyperparameters. 
+•	Including the different visualizations of the three models’ performances was helpful and complements your evaluation of the metrics in addition to your rationale for selecting Model 2 from this group of CNN models. Your rationale for why you used pAUC-above TPR to evaluate the models, rather than a metric like accuracy, is also sound.
+Week 7 Feedback
+•	Once again, an incredibly thorough and well-written report! I don’t want to repeat too much of my earlier feedback on the report, but you did a great job organizing and explaining your rationale for the different components of model building and evaluation for Week 7.
+•	Additionally, your commentary explaining the differences between Week 6’s CNN and the more complex Res-Net18 model in Week 7 illustrate your research into effective means of modeling image data for a task like this. 
+•	It’s possible that I missed this in the report, but it may be helpful to address the sharp rise in validation loss and sharp drop in validation accuracy that occurs in epoch 6 in Model 1 since that is the selected model (even though performance eventually normalizes and outperforms the other models by the end of the training process). 
+•	I also thought your disclosure that Model 2 could have outperformed Model 1 if not for computational limits exhibits both transparency and critical evaluation of the models’ performances on your part. Very well done!
+Week 8 Feedback
+•	You provided a very thorough explanation of the differences between your most complex set of models (EfficientNet) in comparison to the ResNet-18 and CNN models from the prior weeks. The explanation of each layer demonstrates that you have a thorough understanding of the model’s architecture and why it is well-suited to your image classification task. 
+•	Your rationale for prioritizing recall and partial AUC-above TPR in evaluating the models is well-explained and provides additional context for selecting Model 3 from this iteration of models. 
+•	Your mention of the improvement of Week 8’s selected model over Week 7’s selected model also adds to your earlier discussion of EfficientNet’s architecture in the report. 
+Week 9 Feedback
+•	Your transparency about applying the same preprocessing and normalization methods across all models adds context to your discussion of their performance and demonstrates critical evaluation of your modeling process. Very well done. 
+•	Your evaluation of the bias-variance tradeoff among all nine models is insightful and reiterates your earlier point about how fine-tuning the more complex models may be needed to maximize their potential. 
+•	One visualization that may further strengthen the report might be including a visual that compares the partial AUC-above TPR metric across all nine models (similar to how you compared their validation errors). Since the partial AUC-above TPR metric is one of the key metrics that you reference, having a visual of that specific metric may offer readers an opportunity to compare the metric across all nine models. 
+Week 10 Feedback
+•	Your discussion of data improvements made through the three methods of extracting image features, performing PCA to reduce the dimensions, and three methods of augmenting the data is very thorough and offer insights into how these changes impact the image data.
+•	The error analysis section is transparent and provides useful insights into where the model was struggling and why this might be the case.   
+•	Your comparison of the models before and after implementing the data changes is thoughtfully done, and your rationale for selecting the original model is well-supported by model metrics and a critical evaluation of the reliability of the model. 
+Week 11 Feedback
+•	Your discussion of bias in the training data raises an important point about how sourcing training data that mostly represents lighter skin tones can result in missed diagnoses among individuals with darker skin tones. The insights you shared about how this can exacerbate health disparities demonstrate that you have considered biases with care and what the lasting impact of biases in the model can be. 
+•	The bias removal strategy you discussed to potentially remove attributes like age or sex is an interesting one and makes sense in this case as the model may inadvertently miss a diagnosis of a particular individual who is under age 40 or who is male. This will be an interesting preprocessing strategy to explore in the future and demonstrates that you have put a lot of care into determining methods to reduce potential biases in the model. 
+•	Your discussion of how your analysis of feature importance led you to conduct a thorough analysis on how the class 1 images (representing malignant lesions) were classified by the model exhibits a great deal of care in refining the model. You thoughtfully articulate the importance of understanding the classification of class 1 images in particular, and it was interesting to read your thoughts along with seeing the images to understand why the model may have been misclassifying some of the malignant lesions as benign. This demonstrates an incredibly thorough and well thought out analysis on your part. Very well done!
+Week 12 Feedback
+•	Your discussion of the optimal deployment method being dependent on the specific use case was thoughtfully crafted, and your rationale for selecting real-time deployment in this case is sound. I thought you included great practical examples of when and why real-time deployment will be useful for the app.
+•	The choice to use similar model metrics for continued monitoring as were used in the evaluation stages of the model is sound, and I also appreciated your discussion of why it is crucial to continue monitoring performance of the app/model, especially in a case like this in which a misdiagnoses can have lasting physical and mental impacts on an individual. 
+•	Your suggestion to collaborate with medical professionals, such as dermatologists, to validate the model’s predictions is a great idea, especially when considering your discussion of how data drift may impact the model due to changes in population demographics, along with your discussion of how concept drift might impact the model. Medical professionals will have insights into these trends that can then be used to update the model as needed over time. 
+Week 13 Feedback
+•	I loved how you structured this report to tie everything together. The report efficiently show cases what you did, how you accomplished it, and your rationale for the choices you made during each stage of model development. 
+•	Revisiting the “why” behind your problem statement was a thoughtful inclusion that helps remind readers the potential impact of an app like this as they go through each stage of your project. Being able to accurately detect melanoma in the early stages, especially in underserved communities, is an incredibly impactful use case. 
+•	I just want to reiterate how well-constructed your project is. You put so much care and thought into each stage of this, and you should be so proud.
